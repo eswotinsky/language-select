@@ -1,3 +1,7 @@
 #rubyRails, #phpDrupal, #javaAndroid, #cssDesign, #cSharpDotNet {
   display: none;
 }
+
+.jumbotron {
+  text-align: center;
+}
