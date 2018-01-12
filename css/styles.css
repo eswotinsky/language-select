@@ -7,3 +7,7 @@
   padding-left: 10%;
   padding-right: 10%;
 }
+
+form p {
+  font-weight: bold;
+}
