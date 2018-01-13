@@ -10,8 +10,8 @@ $(document).ready(function(){
 
   //Question 1: Creative or Logic?
   //store user choice in var q1
-  //if user selects "creative", display lgVsSm and hide webVsApps
-  //else if user selects "logic", display webVsApps and hide smVsLg
+  //if user selects "creative", display lgVsSm and hide other questions
+  //else if user selects "logic", display webVsApps and hide other questions
   $("[name=creativeVsLogic]").change(function() {
     $("div.results").hide()
     q1 = $("input:radio[name=creativeVsLogic]:checked").val();
@@ -37,8 +37,8 @@ $(document).ready(function(){
 
   //Question 3: Websites vs Apps?
   //store user choice in var q3
-  //if user selects "websites", display lgVsSm2 and hide androidVsWindows
-  //else if user selects "apps", display androidVsWindows and hide smVsLg
+  //if user selects "websites", display lgVsSm2 and hide lower-level questions
+  //else if user selects "apps", display androidVsWindows and hide lower-level questions
   $("[name=webVsApps]").change(function() {
     $("div.results").hide()
     q3 = $("input:radio[name=webVsApps]:checked").val();
