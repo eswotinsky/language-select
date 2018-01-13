@@ -1,5 +1,6 @@
 .results {
   display: none;
+  background-color: yellow;
 }
 
 #webVsApps, #lgVsSm, #lgVsSm2, #uxVsBackend, #androidVsWindows {
