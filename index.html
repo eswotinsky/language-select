@@ -10,7 +10,10 @@
   </head>
   <body>
     <div class="container">
-      <base target="_blank"> <!-- open all links in new tabs by default, so that users can easily explore all links within their results div without losing their place -->
+
+      <!-- open all links in new tabs by default, so that users can easily explore all links within their results div without losing their place -->
+      <base target="_blank">
+
       <div class="jumbotron">
         <h1>Which Coding Track Is Right For Me?</h1>
         <p>Are you interested in becoming a developer, but find all of the options available a bit overwhelming?</p>
@@ -36,7 +39,6 @@
           </label>
         </div>
       </form>
-      <br>
 
       <form id="webVsApps">
         <p>Which sounds more interesting to you - making websites or making desktop/mobile apps?</p>
@@ -54,7 +56,6 @@
           </label>
         </div>
       </form>
-      <br>
 
       <form id="lgVsSm">
         <p>Do you think you'd rather work for a large enterprise (like Microsoft), or are hip start-ups more your speed?</p>
@@ -72,7 +73,27 @@
           </label>
         </div>
       </form>
-      <br>
+
+<!-- lgVsSm2 exists because I (may) want to ask users this question regardless of their response to creativeVsLogic, and I ran into
+issues with showing/hiding the right form elements in some contexts. This duplicate form provides a quick and dirty workaround -->
+
+      <form id="lgVsSm2">
+        <p>Do you think you'd rather work for a large enterprise (like Microsoft), or are hip start-ups more your speed?</p>
+        <div class="radio">
+          <label>
+            <input type="radio" name="lgVsSm2" value="large">
+            I prefer established companies working on bigger-scale projects.
+          </label>
+        </div>
+
+        <div class="radio">
+          <label>
+            <input type="radio" name="lgVsSm2" value="small">
+            I prefer small, agile teams with some extra excitement and risk.
+          </label>
+        </div>
+      </form>
+
 
       <form id="uxVsBackend">
         <p>Would you rather focus on improving user experience and adding style to your websites, or are you more interested in building the "bones" of exciting new websites?</p>
@@ -90,7 +111,6 @@
           </label>
         </div>
       </form>
-      <br>
 
       <form id="androidVsWindows">
         <p>Which sounds more interesting to you - making applications for Android devices, or for Windows?</p>
@@ -110,92 +130,34 @@
       </form>
 
 
-<!-- quiz questions
-
-Are you more interested in making websites and applications look good, or does focusing on the underlying logic and calculations sound more like your style?
-
-I prefer to think creatively and design things.
-  CSS
-  PHP
-  Ruby
-I prefer to think logically and solve puzzles.
-  C#
-  Java
-  Ruby
-  PHP
-
-
-Do you think you'd rather work for a large enterprise (like Microsoft), or are hip start-ups more your speed?
-
-I prefer established companies working on bigger-scale projects.
-  C#
-  CSS
-  Java
-  PHP
-
-I prefer small, agile teams with some extra excitement and risk.
-  Ruby
-  CSS
-  Java
-
-
-Which sounds more interesting to you - making websites or making desktop/mobile apps?
-
-I prefer to make websites
-  PHP
-  Ruby
-  CSS
-
-I prefer to make apps
-  Java
-  C#
-
-
-Would you rather focus on improving user experience and adding style to your websites, or are you more interested in building the "bones" of exciting new websites?
-I prefer thinking about design principles
-  CSS
-I prefer to be more behind-the-scenes
-  Ruby
-  PHP
-
-
-Which sounds more interesting to you - making applications for Android devices, or for Windows?
-
-I prefer working on Windows applications
-  C#
-I prefer working on Android applications
-  Java
-
--->
-
       <!-- results divs -->
-      <div id="rubyRails">
+      <div class="results" id="rubyRails">
         <h2>Ruby + Ruby on Rails</h2>
         <p>Ruby is a favorite of web-focused developers, especially those who are interested in building applications that users can interact with. AirBNB, Groupon, and Hulu are just a few examples of popular websites built with Ruby.</p>
         <p>Ruby is <em>very</em> often used in cojunction with a framework called "Ruby on Rails", or "Rails" for short. Rails is basically a collection of pre-built functions (think of them as miniature programs), which simplify a lot of the most common tasks a Ruby developer might need to do.</p>
         <p><a href="https://www.epicodus.com/ruby">Learn more about Ruby</a> and <a href="https://www.epicodus.com/rails">Rails</a>. You can also <a href="https://www.learnhowtoprogram.com/ruby">preview the Ruby coursework</a> and the <a href="https://www.learnhowtoprogram.com/rails">Rails coursework</a>.</p>
       </div>
 
-      <div id="phpDrupal">
+      <div class="results" id="phpDrupal">
         <h2>PHP + Drupal</h2>
         <p>lorem ipsum dolar sit amet</p>
         <p><a href="https://www.epicodus.com/php">Learn more about PHP</a> and <a href="https://www.epicodus.com/drupal">Drupal</a>. You can also <a href="https://www.learnhowtoprogram.com/php">preview the PHP coursework</a> and the <a href="https://www.learnhowtoprogram.com/drupal">Drupal coursework</a>.</p>
       </div>
 
-      <div id="javaAndroid">
+      <div class="results" id="javaAndroid">
         <h2>Java + Android</h2>
         <p>Java might just be the most popular programming language in use today. It's used for everything from web and mobile apps to high-performance enterprise software. Java has long history of use in <em>many</em> major applications - the underlying language is actually more than two decades old!</p>
         <p>Java is also the official language of Android app development. Since Android is currently the most popular operating system out there, it's no surprise that capable Java and Android developers are still in very high demand by businesses large and small.</p>
         <p><a href="https://www.epicodus.com/java">Learn more about Java</a> and <a href="https://www.epicodus.com/android">Android</a>. You can also <a href="https://www.learnhowtoprogram.com/java">preview the Java coursework</a> and the <a href="https://www.learnhowtoprogram.com/android">Android coursework</a>.</p>
       </div>
 
-      <div id="cssDesign">
+      <div class="results" id="cssDesign">
         <h2>CSS + Web Design</h2>
         <p>lorem ipsum dolar sit amet</p>
         <p><a href="https://www.epicodus.com/css">Learn more about CSS</a> and <a href="https://www.epicodus.com/design">Web Design</a>. You can also <a href="https://www.learnhowtoprogram.com/css">preview the CSS coursework</a> and the <a href="https://www.learnhowtoprogram.com/design">Web Design coursework</a>.</p>
       </div>
 
-      <div id="cSharpDotNet">
+      <div class="results" id="cSharpDotNet">
         <h2>C# + .NET</h2>
         <p>C# (pronounced as "see sharp") is a flexible language used to develop everything from desktop software to mobile apps to video games. And because it's been around for a long time and has the backing of Microsoft, it's one of the most in-demand languages - especially by large, established corporations and government agencies.</p>
         <p>Epicodus students also learn to use the .NET framework, which is basically a collection of pre-built functions (think of them as miniature programs) that simplify a lot of the most common tasks a C# developer might need to do. .NET is particularly useful for building web applications with C# - some popular websites built on .NET include Microsoft's own site, Bing, and Stack Overflow.</p>
