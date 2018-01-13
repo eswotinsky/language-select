@@ -17,10 +17,10 @@ $(document).ready(function(){
     q1 = $("input:radio[name=creativeVsLogic]:checked").val();
     if (q1 == "creative") {
       $("#lgVsSm").show();
-      $("#webVsApps").hide()
+      $("#webVsApps, #lgVsSm2, #uxVsBackend, #androidVsWindows").hide()
     }
     else if (q1 == "logic") {
-      $("#lgVsSm").hide();
+      $("#lgVsSm, #lgVsSm2, #uxVsBackend, #androidVsWindows").hide();
       $("#webVsApps").show()
     }
   })
@@ -31,6 +31,7 @@ $(document).ready(function(){
   $("[name=lgVsSm]").change(function() {
     $("div.results").hide()
     q2 = $("input:radio[name=lgVsSm]:checked").val();
+    $("#webVsApps, #lgVsSm2, #androidVsWindows").hide()
     $("#uxVsBackend").show();
   })
 
@@ -43,10 +44,10 @@ $(document).ready(function(){
     q3 = $("input:radio[name=webVsApps]:checked").val();
     if (q3 == "websites") {
       $("#lgVsSm2").show()
-      $("#androidVsWindows").hide()
+      $("#lgVsSm, #uxVsBackend, #androidVsWindows").hide()
     }
     else if (q3 == "apps") {
-      $("#lgVsSm2").hide()
+      $("#lgVsSm, #lgVsSm2, #uxVsBackend").hide()
       $("#androidVsWindows").show()
     }
   })
@@ -60,7 +61,7 @@ $(document).ready(function(){
       $("div.results").hide()
       q4 = $("input:radio[name=uxVsBackend]:checked").val();
       if (q4 == "ux") {
-        $("#css").show();
+        $("#cssDesign").show();
       }
       else if (q4 == "backend" && q2 == "large") {
         $("#phpDrupal").show();
