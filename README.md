@@ -8,6 +8,10 @@
 
 _This program asks users questions about their specific coding-related interests, and displays different Epicodus track recommendations based on the responses. Forms are used to gather data, and recommendations are shown by toggling an associated div._
 
+## Setup/Installation Requirements
+
+_No setup necessary. View online at https://eswotinsky.github.io/track-selector/._
+
 ## Support and Contact Details
 
 _Please contact eric.swotinsky@gmail.com with any questions or comments._
